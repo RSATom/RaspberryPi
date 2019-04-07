@@ -18,7 +18,7 @@ rsync -avz pi@$SYSROOT_HOST:/usr/lib sysroot/usr --delete
 rsync -avz pi@$SYSROOT_HOST:/opt/vc sysroot/opt --delete
 
 if [ ! -f "sysroot-relativelinks.py" ]; then
-	wget https://raw.githubusercontent.com/riscv/riscv-poky/priv-1.10/scripts/sysroot-relativelinks.py
+	wget https://raw.githubusercontent.com/Kukkimonsuta/rpi-buildqt/master/scripts/utils/sysroot-relativelinks.py
 	chmod +x sysroot-relativelinks.py
 	./sysroot-relativelinks.py sysroot
 fi
